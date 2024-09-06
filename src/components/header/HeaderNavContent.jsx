@@ -206,14 +206,17 @@ const HeaderNavContent = () => {
                 : ""
             } dropdown`}
           >
-            <Link to="/">More</Link>
+            <Link to="/employers-dashboard/dashboard">More</Link>
             <ul>
               <li
                 className={
                   pathname?.includes("/employers-dashboard") ? "current" : ""
                 }
               >
-                <Link to="/" className=" border-b-2">
+                <Link
+                  to="/employers-dashboard/dashboard"
+                  className=" border-b-2"
+                >
                   Interview
                 </Link>
               </li>
@@ -222,12 +225,15 @@ const HeaderNavContent = () => {
                   pathname?.includes("/employers-dashboard") ? "current" : ""
                 }
               >
-                <Link to="/" className=" border-b-2">
+                <Link
+                  to="/employers-dashboard/dashboard"
+                  className=" border-b-2"
+                >
                   Assessments
                 </Link>
               </li>
               <li className={pathname?.includes("/") ? "current" : ""}>
-                <Link to="/">Reports</Link>
+                <Link to="/employers-dashboard/dashboard">Reports</Link>
               </li>
             </ul>
           </li>

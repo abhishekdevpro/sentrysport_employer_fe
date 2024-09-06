@@ -1,17 +1,17 @@
 const mobileMenudate = [
   {
     id: 1,
-    label: "Home",
+    label: "Dashboard",
     items: [
       {
-        name: "Home Page 01",
-        routePath: "/",
+        name: "Dashboard",
+        routePath: "/employers-dashboard/dashboard",
       },
     ],
   },
   {
     id: 2,
-    label: "Job Listing",
+    label: "Jobs",
     items: [
       {
         name: "Job Post",
@@ -21,72 +21,28 @@ const mobileMenudate = [
         name: "Job List ",
         routePath: "/employers-dashboard/manage-jobs",
       },
-      // {
-      //   name: "Job List V5",
-      //   routePath: "/job-list-v5",
-      // },
-      // {
-      //   name: "Job List V6",
-      //   routePath: "/job-list-v6",
-      // },
-      // {
-      //   name: "Job List V7",
-      //   routePath: "/job-list-v7",
-      // },
-      // {
-      //   name: "Job List V8",
-      //   routePath: "/job-list-v8",
-      // },
-      // {
-      //   name: "Job List V9",
-      //   routePath: "/job-list-v9",
-      // },
-      // {
-      //   name: "Job List V10",
-      //   routePath: "/job-list-v10",
-      // },
-      // {
-      //   name: "Job List V11",
-      //   routePath: "/job-list-v11",
-      // },
-      // {
-      //   name: "Job List V12",
-      //   routePath: "/job-list-v12",
-      // },
-      // {
-      //   name: "Job List V13",
-      //   routePath: "/job-list-v13",
-      // },
-      // {
-      //   name: "Job List V14",
-      //   routePath: "/job-list-v14",
-      // },
     ],
   },
   {
     id: 3,
-    label: "Sentryspot id",
+    label: "More ",
     items: [
+      // {
+      //   name: "Candidate profile",
+      //   routePath: "/candidates-dashboard/my-profile",
+      // },
       {
-        name: "Sentryspot id",
-        routePath: "/sentry-spot",
+        name: "Interviews",
+        routePath: "/employers-dashboard/dashboard",
       },
       {
-        name: "Candidate profile",
-        routePath: "/candidates-dashboard/my-profile",
+        name: "Assessment",
+        routePath: "/employers-dashboard/dashboard",
       },
-      // {
-      //   name: "Job Single V3",
-      //   routePath: "/job-single-v3/3",
-      // },
-      // {
-      //   name: "Job Single V4",
-      //   routePath: "/job-single-v4/4",
-      // },
-      // {
-      //   name: "Job Single V5",
-      //   routePath: "/job-single-v5/5",
-      // },
+      {
+        name: "reports",
+        routePath: "/employers-dashboard/dashboard",
+      },
     ],
   },
   {

@@ -189,7 +189,7 @@ const FormContent = () => {
 
       <div className="form-group">
         <button
-          className="theme-btn btn-style-one"
+          className="theme-btn btn-style-one bg-[#003479] hover:bg-[#E60278]"
           type="submit"
           disabled={loading}
         >

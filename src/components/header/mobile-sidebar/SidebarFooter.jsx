@@ -1,4 +1,8 @@
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+
 const SidebarFooter = () => {
+  const navigate = useNavigate();
   const socialContent = [
     { id: 1, icon: "fa-facebook-f", link: "https://www.facebook.com/" },
     { id: 2, icon: "fa-twitter", link: "https://www.twitter.com/" },
@@ -8,12 +12,12 @@ const SidebarFooter = () => {
 
   return (
     <div className="mm-add-listing mm-listitem pro-footer">
-      <a
-        href="/employers-dashboard/post-jobs"
-        className="theme-btn btn-style-one mm-listitem__text"
+      <Button
+        className="theme-btn btn-style-one mm-listitem__text bg-[#003479] hover:bg-[#E60278]"
+        onClick={() => navigate("/employers-dashboard/post-jobs")}
       >
         Job Post
-      </a>
+      </Button>
       {/* job post btn */}
 
       <div className="mm-listitem__text">
