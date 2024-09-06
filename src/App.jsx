@@ -271,7 +271,7 @@ function App() {
                     element={<AllApplicantsEmploeesPage />}
                   />
                   <Route
-                    path="shortlisted-resumes"
+                    path="shortlisted-candidates"
                     element={<ShortListedResumeEmploeeDBPage />}
                   />
                   <Route path="packages" element={<PackageEmploeeDBPage />} />

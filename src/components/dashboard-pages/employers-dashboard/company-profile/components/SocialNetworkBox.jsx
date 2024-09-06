@@ -50,111 +50,22 @@ const SocialNetworkBox = () => {
   return (
     <form className="default-form">
       <div className="row">
-        <LogoCoverUploader />
-
-        {/* <!-- Input --> */}
-        <div className="form-group col-lg-12 col-md-12">
-          <label htmlFor="name">main paragraph</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="detail of company"
-            // {...register("name")}
-            // required
-          />
-          {/* {errors.name && (
-            <p className="!text-red-500 text-sm">{errors.name.message}</p>
-          )} */}
-        </div>
-
-        {/*  */}
-        <h4 className="text-2xl text-black capitalize mb-2">
-          Info About company
-        </h4>
-
-        <LogoCoverUploader />
-
-        <div className="form-group col-lg-12 col-md-12">
-          <label htmlFor="name">Info about Company</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Info about company"
-            // {...register("name")}
-            // required
-          />
-          {/* {errors.name && (
-            <p className="!text-red-500 text-sm">{errors.name.message}</p>
-          )} */}
-        </div>
         {/* culter/event */}
-        <h4 className="text-2xl text-black capitalize mb-2">
-          Info About Event
-        </h4>
-        <div className="form-group col-lg-12 col-md-12">
-          {/* <label htmlFor="name">main paragraph</label> */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Info about events"
-            // {...register("name")}
-            // required
-          />
-          {/* {errors.name && (
-            <p className="!text-red-500 text-sm">{errors.name.message}</p>
-          )} */}
-        </div>
-        <div className=" flex justify-between form-group col-lg-12 col-md-12">
-          {/* <label htmlFor="name">main paragraph</label> */}
-          {/* <LogoCoverUploader /> */}
-          <div className="form-group col-lg-6 col-md-6">
-            <LogoCoverUploader text="Add Video" />
-          </div>
-          <div className="form-group col-lg-6 col-md-6">
-            <LogoCoverUploader />
-          </div>
-        </div>
 
-        <h4 className="text-2xl text-black capitalize mb-2">Add Your Team</h4>
-        <LogoCoverUploader text="upload multiple images" />
+        <div className=" flex  flex-col items-center justify-between form-group col-lg-12 col-md-12">
+          <label htmlFor="events" className=" text-xl flex justify-start">
+            Events
+          </label>
 
-        <div className="form-group col-lg-12 col-md-12 ">
-          <input
-            type="text"
-            name="name"
-            placeholder="Info about Team"
-            // {...register("name")}
-            // required
-          />
-          {/* {errors.name && (
-            <p className="!text-red-500 text-sm">{errors.name.message}</p>
-          )} */}
-        </div>
-
-        <h4 className="text-2xl text-black capitalize mb-2">
-          Watch what we have to say
-        </h4>
-        <div className=" flex justify-between form-group col-lg-12 col-md-12">
-          {/* <label htmlFor="name">main paragraph</label> */}
-          {/* <LogoCoverUploader /> */}
-          <div className="form-group col-lg-6 col-md-6">
-            <LogoCoverUploader text="Add Video" />
+          <div className="flex justify-between">
+            {" "}
+            <div className="form-group col-lg-6 col-md-6">
+              <LogoCoverUploader text="Add Video" />
+            </div>
+            <div className="form-group col-lg-6 col-md-6">
+              <LogoCoverUploader />
+            </div>
           </div>
-          <div className="form-group col-lg-6 col-md-6">
-            <LogoCoverUploader />
-          </div>
-        </div>
-        <div className="form-group col-lg-12 col-md-12 ">
-          <input
-            type="text"
-            name="name"
-            placeholder="Watch what we have to say"
-            // {...register("name")}
-            // required
-          />
-          {/* {errors.name && (
-            <p className="!text-red-500 text-sm">{errors.name.message}</p>
-          )} */}
         </div>
 
         <h4 className="text-2xl text-black capitalize mb-2">

@@ -14,24 +14,24 @@ body {
   padding: 6px 25px;
 } */
 button:hover {
-  background: #003479;
+  /* background: #003479; */
 }
 
 .container {
   width: 1280px;
 }
-.main-menu ul {
+.main-menu-home ul {
   display: flex;
   list-style: none;
   gap: 20px;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
-.main-menu a {
+.main-menu-home a {
   color: #003479;
   text-decoration: none;
 }
-.main-menu a:hover {
+.main-menu-home a:hover {
   color: #e60278;
 }
 .side-menu a {

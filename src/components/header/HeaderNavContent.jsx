@@ -13,10 +13,14 @@ import {
   isActiveLink,
   isActiveParentChaild,
 } from "../../utils/linkActiveChecker";
+import { Constant } from "@/utils/constant/constant";
+import { FiPhone, FiMail } from "react-icons/fi";
 
 import { useLocation } from "react-router-dom";
 const HeaderNavContent = () => {
   const { pathname } = useLocation();
+  const userInfo = JSON.parse(localStorage.getItem(Constant.USER_INFO));
+
   return (
     <>
       <nav className="nav main-menu ">
@@ -100,7 +104,26 @@ const HeaderNavContent = () => {
                 : ""
             } dropdown`}
           >
-            <span>Jobs</span>
+            <Link to="/employers-dashboard/dashboard">Dashboard</Link>
+            {/* <ul>
+              <li
+                className={
+                  pathname?.includes("/employers-dashboard") ? "current" : ""
+                }
+              ></li>
+            </ul> */}
+          </li>
+
+          {/* jobs */}
+          <li
+            className={`${
+              isActiveParent(employerItems, pathname) ||
+              pathname?.split("/")[1] === "employers-dashboard"
+                ? "current"
+                : ""
+            } dropdown`}
+          >
+            <Link to="/employers-dashboard/manage-jobs">Jobs</Link>
             <ul>
               <li
                 className={
@@ -109,19 +132,25 @@ const HeaderNavContent = () => {
               >
                 <Link to="/employers-dashboard/post-jobs">Job Post</Link>
               </li>
-              {/* <li
+              <li
                 className={
-                  pathname?.includes("/job-dashboard") ? "current" : ""
+                  pathname?.includes("/employers-dashboard") ? "current" : ""
                 }
               >
-                <Link to="/job-list-v7">Recent Jobs</Link>
-              </li> */}
-              {/* <Link to="/job-single-v1/1">Recent Jobs</Link> */}
+                <Link to="/employers-dashboard/manage-jobs">Jobs List</Link>
+              </li>
+              <li
+                className={
+                  pathname?.includes("/employers-dashboard") ? "current" : ""
+                }
+              >
+                <Link to="/"> shortlisted/Saved Candidates </Link>
+              </li>
             </ul>
           </li>
           {/* End findjobs menu items */}
 
-          <li
+          {/* <li
             className={`${
               isActiveParent(employerItems, pathname) ||
               pathname?.split("/")[1] === "employers-dashboard"
@@ -131,33 +160,7 @@ const HeaderNavContent = () => {
           >
             <span>SentrySpot ID</span>
             <ul>
-              {/*{employerItems.map((item) => (
-                <li className="dropdown" key={item.id}>
-                  <span
-                    className={
-                      isActiveParentChaild(item.items, pathname)
-                        ? "current"
-                        : ""
-                    }
-                  >
-                    {item.title}
-                  </span>
-                  <ul>
-                    {item.items.map((menu, i) => (
-                      <li
-                        className={
-                          isActiveLink(menu.routePath, pathname)
-                            ? "current"
-                            : ""
-                        }
-                        key={i}
-                      >
-                        <Link to={menu.routePath}>{menu.name}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))} */}
+              
               <li
                 className={pathname?.includes("/sentry-spot") ? "current" : ""}
               >
@@ -192,7 +195,43 @@ const HeaderNavContent = () => {
                 </Link>
               </li>
             </ul>
+          </li> */}
+
+          {/* more */}
+          <li
+            className={`${
+              isActiveParent(employerItems, pathname) ||
+              pathname?.split("/")[1] === "employers-dashboard"
+                ? "current"
+                : ""
+            } dropdown`}
+          >
+            <Link to="/">More</Link>
+            <ul>
+              <li
+                className={
+                  pathname?.includes("/employers-dashboard") ? "current" : ""
+                }
+              >
+                <Link to="/" className=" border-b-2">
+                  Interview
+                </Link>
+              </li>
+              <li
+                className={
+                  pathname?.includes("/employers-dashboard") ? "current" : ""
+                }
+              >
+                <Link to="/" className=" border-b-2">
+                  Assessments
+                </Link>
+              </li>
+              <li className={pathname?.includes("/") ? "current" : ""}>
+                <Link to="/">Reports</Link>
+              </li>
+            </ul>
           </li>
+
           {/* End Employers menu items */}
           {/* <li
             className={`${
@@ -266,6 +305,38 @@ const HeaderNavContent = () => {
               </li>
             </ul>
           </li> */}
+          <li
+            className={`${
+              isActiveParent(candidateItems, pathname) ||
+              pathname?.split("/")[1] === "candidates-dashboard"
+                ? "current"
+                : ""
+                ? "current"
+                : ""
+            } dropdown`}
+          >
+            <Link to="">Contact</Link>
+            <ul className=" h-[200px] w-[350px]  p-4 flex gap-10 ">
+              <p className="text-md  border-b-2 ">
+                {" "}
+                Connect with our Sales Team
+              </p>
+              <p className="text-md  border-b-2 mt-4 ">Sales Enquiries</p>
+              <div className="flex justify-start items-center  mt-2 ">
+                <FiPhone className="mr-2 size-4" />
+                <p className="text-md"> {userInfo?.phone}</p>
+              </div>
+              <div className="flex justify-start items-center  mt-2 ">
+                <FiMail className="mr-2 size-4" />
+                <p className="text-md"> {userInfo?.email}</p>
+              </div>
+              {/* <p className="text-md  border-b-2 mt-4 ">Customer Support </p>
+              <div className="flex justify-start items-center  mt-2 mb-4  ">
+                <FiMail className="mr-2 size-4" />
+                <p className="text-md"> {userInfo?.email}</p>
+              </div> */}
+            </ul>
+          </li>
 
           <li
             className={`${

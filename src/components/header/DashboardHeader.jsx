@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import employerMenuData from "../../data/employerMenuData";
+import { profileMenu } from "../../data/employerMenuData";
 import HeaderNavContent from "./HeaderNavContent";
 import { isActiveLink } from "../../utils/linkActiveChecker";
 import logo from "../../Images/logo.png";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { Constant } from "@/utils/constant/constant";
 
 const DashboardHeader = () => {
+  const navigate = useNavigate();
   const { pathname } = useLocation();
+  const userInfo = JSON.parse(localStorage.getItem(Constant.USER_INFO));
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -21,6 +25,7 @@ const DashboardHeader = () => {
   useEffect(() => {
     window.addEventListener("scroll", changeBackground);
   }, []);
+  // console.log(userInfo);
 
   return (
     // <!-- Main Header-->
@@ -53,15 +58,20 @@ const DashboardHeader = () => {
           {/* End .nav-outer */}
 
           <div className="outer-box">
-            <button className="menu-btn">
+            <button
+              className="menu-btn"
+              onClick={() => {
+                navigate("/employers-dashboard/shortlisted-canidates");
+              }}
+            >
               <span className="count">1</span>
               <span className="icon la la-heart-o"></span>
             </button>
             {/* wishlisted menu */}
 
-            <button className="menu-btn">
+            {/* <button className="menu-btn">
               <span className="icon la la-bell"></span>
-            </button>
+            </button> */}
             {/* End notification-icon */}
 
             {/* <!-- Dashboard Option --> */}
@@ -74,18 +84,25 @@ const DashboardHeader = () => {
               >
                 <img
                   alt="avatar"
-                  className="thumb"
+                  className="thumb h-[20px] w-[20px] "
                   src="/images/resource/company-6.png"
                 />
-                <span className="name">My Account</span>
+                {/* <span className="name">My Account</span> */}
               </a>
 
               <ul className="dropdown-menu">
-                {employerMenuData.map((item) => (
+                <div className="bg-slate-600 text-white w-full p-2 rounded-md">
+                  <p className="text-white">
+                    {userInfo?.first_name + " " + userInfo?.last_name}{" "}
+                  </p>
+                  <p className="mb-2 text-white">{userInfo?.email} </p>
+                </div>
+
+                {profileMenu.map((item) => (
                   <li
                     className={`${
                       isActiveLink(item.routePath, pathname) ? "active" : ""
-                    } mb-1`}
+                    } mb-1 mt-2`}
                     key={item.id}
                   >
                     <Link to={item.routePath}>

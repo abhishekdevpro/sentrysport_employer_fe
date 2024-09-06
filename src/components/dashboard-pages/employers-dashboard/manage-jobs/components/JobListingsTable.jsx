@@ -41,6 +41,13 @@ const JobListingsTable = () => {
             <option>Time:Low to High</option>
             <option>Accuracy: High to Low</option>
           </select>
+          <select className="ml-2 chosen-single form-select">
+            <option>All Jobs</option>
+            <option>Published</option>
+            <option>UnPublished</option>
+            <option>Under Review</option>
+            <option>Rejected</option>
+          </select>
         </div>
       </div>
       {/* End filter top bar */}
@@ -104,7 +111,13 @@ const JobListingsTable = () => {
                     </td>
                     <td className="applied">
                       <a href="/employers-dashboard/all-applicants">
-                        3+ Applied
+                        Applied /
+                      </a>
+                      <a
+                        href="/employers-dashboard/shortlisted-candidates"
+                        className=" "
+                      >
+                        Recommended
                       </a>
                     </td>
                     <td>
@@ -143,6 +156,11 @@ const JobListingsTable = () => {
                           <li>
                             <button data-text="Delete Aplication">
                               <span className="la la-trash"></span>
+                            </button>
+                          </li>
+                          <li>
+                            <button data-text="Share Aplication">
+                              <span className="la la-share"></span>
                             </button>
                           </li>
                         </ul>

@@ -241,7 +241,7 @@ const index = () => {
           <div className="header-menu">
             <div className="header-logo">
               <img src="img/company_logo.png" />
-              <div className="main-menu ml-10">
+              <div className="main-menu-home ml-10">
                 <ul>
                   <li>
                     <Link href="">Home</Link>
@@ -297,6 +297,7 @@ const index = () => {
           </div>
         </div>
       </div>
+
       <div className="banner">
         <div className="auto-container">
           <div className="banner-text">
@@ -321,14 +322,7 @@ const index = () => {
                     repeat={Infinity}
                   />
                 </h2>
-                <h1>
-                  {/* <div className="typing-demo font-bold">
-                    {" "}
-                    Hire Talent/Post Jobs/Send Skill Test/Video JD
-                  </div> */}
 
-                  <h2></h2>
-                </h1>
                 <div className="b-para">
                   <p>
                     SentrySpot is the UK’s premier AI-driven security services
@@ -439,8 +433,7 @@ const index = () => {
         <div className="auto-container">
           <div className="steps-section ">
             <h2 className="">
-              Spot new Hire with our easy to use platform <br /> instead of
-              “Hiring is now simple”
+              Spot new Hire with our easy to use platform <br />
             </h2>
             <div className="step-one">
               <div className="step-text">

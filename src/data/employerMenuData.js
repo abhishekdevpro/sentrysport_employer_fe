@@ -43,9 +43,9 @@ const employerMenu = [
   },
   {
     id: 7,
-    name: "Shortlisted Resumes",
+    name: "Shortlisted Candidates",
     icon: "la-bookmark-o",
-    routePath: "/employers-dashboard/shortlisted-resumes",
+    routePath: "/employers-dashboard/shortlisted-candidates",
     active: "",
   },
   {
@@ -92,3 +92,26 @@ const employerMenu = [
   // },
 ];
 export default employerMenu;
+export const profileMenu = [
+  // {
+  //   id: 1,
+  //   name: "Resume Alerts",
+  //   icon: "la-bell",
+  //   routePath: "/employers-dashboard/resume-alerts",
+  //   active: "",
+  // },
+  {
+    id: 1,
+    name: "Change Password",
+    icon: "la-lock",
+    routePath: "/employers-dashboard/change-password",
+    active: "",
+  },
+  // {
+  //   id: 12,
+  //   name: "Logout",
+  //   icon: "la-sign-out",
+  //   routePath: "",
+  //   active: "",
+  // },
+];
